@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Avenir:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Helvetica:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+
+  width: 100vw;
+  line-height: 1.5;
+  background-color: #05050b;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+
+  -webkit-font-antialiased: antialiased;
+}
+.App {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  background-color: #0f0919;
+  justify-content: space-between;
+}
+.NavbtnList,
+.sidebarbutton {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0px;
+  width: calc(100% - 0.5em);
+}
+.navbtnIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 70px 8px 10px;
+  background-color: #611371;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+.setbtn {
+  background-color: #345825;
+}
+.topnav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  gap: 10px;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.toggle {
+  padding: 8px 15px;
+  border-radius: 10px;
+  background-color: #167d76;
+  border: none;
+  color: white;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.Headtitle {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 45px;
+  padding: 0px 15px;
+  text-align: center;
+}
+
+.lucide-check.restore {
+  stroke: white;
+}
+
+.task {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 700px;
+  justify-content: space-between;
+}
+.inputandsearch {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  position: relative;
+}
+.search {
+  border-radius: 10px;
+  border: none;
+  background-color: #155259;
+  padding: 8px 200px 13px 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: 300;
+  font-size: 15px;
+  height: 45px;
+  margin-left: 10px;
+}
+.lucide-search {
+  position: absolute;
+  top: 10px;
+  left: 470px;
+}
+.search::placeholder {
+  padding-left: 20px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.addtask {
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 13px 50px;
+  background-color: #154828;
+  margin-right: 10px;
+  margin-bottom: 35px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.mainContainer {
+  background-color: #1c123085;
+  height: calc(100% - 2em);
+  width: 60%;
+  max-width: 900px;
+  margin: 0.7em auto;
+  padding: 15px 30px;
+}
+.unorderlist {
+  list-style: none;
+}
+
+.todolistItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 800;
+  font-size: 16px;
+  background-color: #0b2c39;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0px;
+  align-items: center;
+  max-width: 700px;
+}
+.tododescir {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+.todocontent {
+  color: #8c929e;
+}
+.todobuttons {
+  opacity: 0; /* or visibility: hidden; */
+  transition: opacity 0.3s ease; /* Smooth transition for showing */
+}
+
+.todobuttons:hover {
+  opacity: 1; /* or visibility: visible; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.todobtndel,
+.todobtndone {
+  padding: 3.5px;
+  border-radius: 8px;
+}
+.todobtndel {
+  border: none;
+  color: white;
+  background-color: #631b22;
+}
+.todobtndone {
+  border: none;
+  color: white;
+  background-color: #097025;
+}
+
+.addtextarea,
+.taskname {
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  width: 416px;
+  border: none;
+  background-color: #205a6f;
+}
+.addtextarea {
+  height: 280px;
+  padding: 8px 0px 0px 16px;
+}
+.taskname {
+  height: 20px;
+  padding: 20px 0px 20px 16px;
+}
+.addtasktop {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  width: 416px;
+  gap: 10px;
+  justify-content: space-between;
+}
+.addtasktop p {
+  font-weight: 700;
+  font-size: 20px;
+}
+.addcontainer {
+  background-color: #241843;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  width: 480px;
+}
+.addbtnaction {
+  display: flex;
+  flex-direction: row;
+}
+.togglec {
+  padding: 12px 19px;
+  border-radius: 10px;
+  background-color: #655f19;
+  border: none;
+  color: white;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  margin: 15px;
+}
+.addbtnaction {
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+}
+.addbtnaction button {
+  padding: 10px 25px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #1e4e39;
+}
+
+.unorderlist {
+  max-height: 380px;
+  overflow-x: auto;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 767px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .NavbtnList {
+    background-color: black;
+    flex-direction: row;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbtnIcon setbtn {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .inputandsearch {
+    width: 5px;
+    padding: 2px;
+  }
+  .inputandsearch::placeholder {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .task {
+    flex-direction: row;
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+    gap: 200px;
+    padding: 5px 10px;
+    margin: 0px;
+  }
+  .mainContainer {
+    width: 320px;
+    padding: 0px;
+    margin: 0px;
+  }
+  .inputandsearch {
+    padding: 0px;
+  }
+  .search {
+    padding: 0px;
+    width: 150px;
+    margin: 0px;
+  }
+  .addtask {
+    padding: 10px;
+    height: 45px;
+    margin: 0px;
+    border-radius: 10px;
+  }
+  .Headtitle {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .search {
+    padding: 0px;
+    width: 320px;
+  }
+  .task {
+    justify-content: left;
+    gap: 20px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  .search {
+    padding: 0px;
+    width: 320px;
+  }
+  .task {
+    justify-content: left;
+    gap: 70px;
+  }
+}
