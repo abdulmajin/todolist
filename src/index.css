@@ -127,15 +127,19 @@ body {
 .search {
   border-radius: 10px;
   border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
   background-color: #155259;
   padding: 8px 200px 13px 8px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin: 5px;
   color: white;
   font-weight: 300;
-  font-size: 15px;
   height: 45px;
   margin-left: 10px;
+}
+.search::placeholder {
+  padding-left: 10px;
 }
 .lucide-search {
   position: absolute;
@@ -360,6 +364,28 @@ body {
   .Headtitle {
     font-size: 30px;
     text-align: center;
+  }
+  .addcontainer {
+    width: 350px;
+    padding: 0px;
+  }
+  .addtasktop {
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+    justify-content: space-evenly;
+  }
+  .taskname,
+  .addtextarea {
+    margin-left: 0px;
+    width: 300px;
+  }
+  .addtextarea {
+    height: 230px;
+  }
+  .unorderlist {
+    height: 400px;
+    overflow-y: auto;
   }
 }
 
